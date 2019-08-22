@@ -23,7 +23,7 @@ enum class Color2(
     GREEN(0, 255, 0),
     BLUE(0, 0, 255),
     INDIGO(75, 0, 130),
-    VIOLET(238, 130, 238); //Kotlin唯一分号的地方
+    VIOLET(238, 130, 238); //Kotlin唯一使用分号的地方
 
     // 方法
     fun rgb() = (r * 256 + g) * 256 + b
