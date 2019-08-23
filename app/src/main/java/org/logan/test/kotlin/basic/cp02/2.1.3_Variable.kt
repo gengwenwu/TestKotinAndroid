@@ -2,8 +2,8 @@ package org.logan.test.kotlin.basic.cp02
 
 /**
  * desc: Kotlin 变量 <br/>
- * 1，val(来自value) - 不可变引用，使用val声明初始化之后再次赋值，它对应的是Java final变量。优先使用val
- * 2，var(来自variable) - 可变引用。这种变量的值可以被改变。它对应的是普通java变量。
+ * 1，val(来自value) - 不可变引用。它对应的是Java final变量，优先使用val。
+ * 2，var(来自variable) - 可变引用。这种变量的值可以被改变，它对应的是普通java变量。
  * time: 2019-08-22 14:22 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
 
     // Kotlin中声明变量：以关键字开始(val、var)，然后是变量名。
     var question = "how old you?"
-    // var answer: Int = 18
+    // var answer: Int = 18 // 显示声明数据类型
     val answer2 = 18 // 类型推到
 
     // 如果变量没有初始化器，必须显示地指定它的类型
@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
 
     // 编译器只会根据初始化器来推断变量的类型，在确定类型的时候不会考虑后续的赋值操作
     val answer4 = 42
-    // answer4 = "NO! "
+    // answer4 = "NO! " // 编译不通过
 
 
     /**

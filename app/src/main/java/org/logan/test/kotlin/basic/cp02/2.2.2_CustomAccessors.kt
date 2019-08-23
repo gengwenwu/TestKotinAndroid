@@ -9,13 +9,13 @@ package org.logan.test.kotlin.basic.cp02
 class Rectangle(val height: Int, val width: Int) {
 
     val isSquare: Boolean
-        get() {
-            // 声明属性的getter （代码块）
+        get() { // 声明属性的getter （代码块 形式）
             return height == width
         }
 
-    // 声明属性的gette (表达式)
+
     val isRectangle: Boolean
+        // 声明属性的getter (表达式 形式)
         get() = (height > width) || (width > height)
 
     // 这里有一个疑问，声明一个没有参数的函数(isSquare())，是否比声明带自定义getter的属性更好(isMarried())？

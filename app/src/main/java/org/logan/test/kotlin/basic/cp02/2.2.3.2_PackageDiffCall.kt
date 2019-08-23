@@ -17,7 +17,7 @@ import org.logan.test.kotlin.basic.cp02.ext.createRandomRectangle
 
 fun main(args: Array<String>) {
 
-    var rectangle = createRandomRectangle()
+    val rectangle = createRandomRectangle()
     println(rectangle.isSquare)
 
 }
