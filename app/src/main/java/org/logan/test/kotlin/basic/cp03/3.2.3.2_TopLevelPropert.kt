@@ -23,11 +23,11 @@ fun reportOperationCount() {
 }
 
 
-// private常量
+// private常量 (val声明)
 val UNIX_LINE_SEPARATOR = "\n"
 // Java代码 -> private static final String UNIX_LINE_SEPARATOR = "\n";
 
-// public 常量，添加const 关键字
+// 添加const关键字，变成public常量
 const val UNIX_LINE_SEPARATOR_2 = "\n"
 //  Java代码 -> public static final String UNIX_LINE_SEPARATOR_2 = "\n";
 
