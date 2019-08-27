@@ -6,7 +6,7 @@ package org.logan.test.kotlin.basic.cp03
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-fun <T> Collection<T>.joinToString( // 为Collection
+fun <T> Collection<T>.joinToString(
     separator: String = ", ",
     prefix: String = " ",
     postfix: String = ""

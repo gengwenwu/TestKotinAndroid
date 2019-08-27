@@ -35,7 +35,7 @@ fun createCollections() {
 
 fun showNewApiInKotlin() {
 
-    var strings = listOf("first", "second", "fourteenth")
+    val strings = listOf("first", "second", "fourteenth")
     println(strings.last()) // 最后一个元素
 
     val numbers = setOf(1, 14, 2)

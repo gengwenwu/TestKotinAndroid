@@ -21,7 +21,7 @@ fun main() {
 fun UseIn() {
     // 在Kotlin中没有for循环。为了替代这种循环用法，Kotlin提出了区间的概念。
     // 区间本质上就是两个值之间的间隔，这两个值通常是数字：一个起始值，一个结束值。
-    // 注意 Kotlin的区间是包含的或者闭合的，意味着第二个值始终是区间的一部分。
+    // 注意: Kotlin的区间是包含的或者闭合的，意味着第二个值始终是区间的一部分。
 
     val oneToTen = 1..10 // 1..10表示区间。 ..语法始终创建的是包含结束值，即：包含10
     for (number in oneToTen) {
@@ -36,20 +36,21 @@ fun UseIn() {
 }
 
 
+// Kotlin until 语法
+fun useUntil() {
+    // until不包括结束值，如下：包含1，不包含10。
+    for (i in 0 until 10) {
+        println("until ->: ${i}")
+    }
+}
+
+
 // Kotlin downTo 语法
 fun useDownTo() {
     // 带步长的数列(下面的1)，它允许跳过一些数字。步长也可以是负数，这种情况下数列是递减而不是递增。
     // step把步长的绝对值变成2，但是必须保持方向一致。
     for (i in 20 downTo 1 step 2) {
         println("downTo ->: ${i}")
-    }
-}
-
-// Kotlin until 语法
-fun useUntil() {
-    // until不包括结束值，如下：包含1，不包含10。
-    for (i in 0 until 10) {
-        println("until ->: ${i}")
     }
 }
 

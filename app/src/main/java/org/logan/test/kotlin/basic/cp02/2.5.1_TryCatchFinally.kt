@@ -8,7 +8,7 @@ import java.io.StringReader
  * 1，try、throw是一个表达式。<br/>
  * 2，与Java最大的区别在于没有throws子句。<br/>
  * 3，Kotlin不区分受检异常和非受检异常，不用指定函数抛出的异常，而且可以处理也可以不处理异常。<br/>
- *
+ *-
  * time: 2019-08-25 15:58 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
@@ -27,7 +27,7 @@ fun main() {
 }
 
 
-fun doThrowIsAnExpression() {
+fun doThrowIsAnExpression() { // 不必显示地指定这个函数可能抛出的异常
     val number = 10
 
     val percentage =
@@ -38,7 +38,7 @@ fun doThrowIsAnExpression() {
 }
 
 // try、catch、finally
-fun readNumber(reader: BufferedReader): Int? { // 不必显示地指定这个函数可能抛出的异常
+fun readNumber(reader: BufferedReader): Int? {
     try {
         val line = reader.readLine()
         return Integer.parseInt(line)
@@ -51,7 +51,7 @@ fun readNumber(reader: BufferedReader): Int? { // 不必显示地指定这个函
 
 // try表达式 - catch return
 fun readNumber2(reader: BufferedReader) {
-    val number = try { // 变成try表达式，花括号不能省略
+    val number = try { // 变成try表达式，花括号不能省略。与if 不同之处
         Integer.parseInt(reader.readLine())
     } catch (e: java.lang.NumberFormatException) {
         return // 执行该句后，后面代码不会被执行

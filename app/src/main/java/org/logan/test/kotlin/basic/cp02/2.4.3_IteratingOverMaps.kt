@@ -24,7 +24,7 @@ fun main(args: Array<String>) {
     }
 
 
-    var list = arrayListOf("10", "11", "1001")
+    val list = arrayListOf("10", "11", "1001")
 
     // 使用in 遍历 list， index是下标、element是元素
     for ((index, element) in list.withIndex()) {
