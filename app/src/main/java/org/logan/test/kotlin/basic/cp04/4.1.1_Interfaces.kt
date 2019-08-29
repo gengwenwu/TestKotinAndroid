@@ -5,7 +5,8 @@ package org.logan.test.kotlin.basic.cp04
  * 1，默认是public final。
  * 2，Kotlin的接口与Java8中的相似：它们都可以包含抽象方法的定义、非抽象方法的实现（Java8 default 方法），但它们不能包含任何状态。<br/>
  * 3，默认实现方法不需要加default关键字。 <br/>
- * 4，Kotlin 1.0是以Java6为目标设计的，并且不支持接口中的默认方法。 <br/>
+ * 4，在接口中，不能使用final、open或者abstract。接口中的成员始终是open的。
+ * 5，Kotlin 1.0是以Java6为目标设计的，并且不支持接口中的默认方法。 <br/>
  *    因此它会把每个带默认方法的接口编译成一个普通接口和一个将方法体作为静态函数的类(DefaultImpls)的结合体。<br/>
  * -
  * time: 2019-08-29 10:35 <br/>
