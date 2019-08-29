@@ -47,7 +47,7 @@ interface Focusable {
 }
 
 
-class Button1 : Clickable, Focusable {
+class Button2 : Clickable, Focusable {
 
     // 如果没有显示实现showOff()，将会编译错误。 如果同样的继承成员不止一个实现，必须提供一个显示实现。
     override fun showOff() {
