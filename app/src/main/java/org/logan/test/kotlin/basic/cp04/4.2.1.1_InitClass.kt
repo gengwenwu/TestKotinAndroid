@@ -12,7 +12,11 @@ package org.logan.test.kotlin.basic.cp04
  * since V 1.0 <br/>
  */
 
-class User(val nickname: String) // 主构造方法 （声明参数 + 属性初始化）
+/**
+ * 主构造方法 （声明参数 + 属性初始化）<br/>
+ * val意味着相应的属性会用构造方法的参数来初始化。<br/>
+ **/
+class User(val nickname: String)
 
 // 解析上面User类代码 (全量版本)
 class User2 constructor(_nickname: String) { // constructor关键字用来开始一个主构造方法或从构造方法的声明。
@@ -42,5 +46,22 @@ class User4(val nickname: String) // val意味着相应的属性会用构造方�
 // ======= 上面所有的User，都是等价的。
 
 
-// 构造方法可以设置默认值
+/**
+ * 构造方法可以设置默认值  <br/>
+ * 如果所有的构造方法参数都有默认值，编译器会生成一个额外的不带参数的构造方法来使用所有的默认值。<br/>
+ * */
 class User5(val nickname: String, val isSubscribed: Boolean = true)
+
+
+fun main(args: Array<String>) {
+    val alice = User5("Alice")
+    println(alice.isSubscribed)
+
+    val bob = User5("Bob", false)
+    println(bob.isSubscribed)
+
+
+    val carol = User5("Carol", isSubscribed = false)
+    println(carol.isSubscribed)
+
+}
