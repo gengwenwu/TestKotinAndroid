@@ -2,6 +2,10 @@ package org.logan.test.kotlin.basic.cp02
 
 /**
  * desc: Kotlin 自定义访问器。使用 get() 关键字 <br/>
+ * 1，自定义getter，建议使用val声明变量，不会生成成员变量。<br/>
+ * 2，自定义setter，必须使用var声明变量，会生成成员变量。<br/>
+ * 3，在自定义访问器里面，可以使用field关键字，访问原始值。
+ *
  * time: 2019-08-22 15:31 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
