@@ -14,7 +14,7 @@ import java.io.File
  * since V 1.0 <br/>
  */
 
-object Payroll { // 使用object关键字
+object Payroll { // 使用object关键字，声明 对象声明
 
     val allEmployees = arrayListOf<Person>()
 
@@ -37,7 +37,7 @@ object CaseInsensitiveFileComparator : Comparator<File> { // 对象声明
     }
 }
 
-// 在类中声明对象，这样的对象同样只有一个单一实例。
+// 在类中声明对象，这样的对象同样只有一个单一实例。实质是一个嵌套类
 data class Person(val name: String) {
 
     // 对象声明，比较器
