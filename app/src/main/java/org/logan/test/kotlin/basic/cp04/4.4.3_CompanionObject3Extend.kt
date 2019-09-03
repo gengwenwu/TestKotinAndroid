@@ -23,5 +23,4 @@ fun Person3.Companion.fromJSON(json: String): Person? = null
 fun main() {
     // 调用fromJSON就好像它是一个伴生对象定义的方法一样
     val p = Person3.fromJSON("{'nickname': 'Alice'}")
-
 }
