@@ -43,7 +43,3 @@ class AnnotationField {
         var name: String = ""
     }
 }
-
-fun main() {
-
-}
