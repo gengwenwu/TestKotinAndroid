@@ -25,17 +25,16 @@ interface JSONFactory<T> {
 }
 
 class Person10(val name: String) {
-
     companion object : JSONFactory<Person2> {
         // 实现接口的伴生对象
         override fun fromJSON(jsonText: String): Person2 = Person2.fromJSON(jsonText)
     }
 }
 
-
 fun <T> loadFromJSON(factory: JSONFactory<T>): T? {
     return null;
 }
+
 
 fun main() {
     // 调用方式一：通过指定的名称调用

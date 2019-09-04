@@ -23,6 +23,6 @@ fun eval(e: Expr): Int =
     when (e) { // 新添加 Digit子类后，但这里的判断分支并对它进行处理，这样很可能给程序带来bug。
         is Num -> e.value
         is Sum -> eval(e.right) + eval(e.left)
-        else -> // 必须有else分支
+        else -> // 语法上必须有else分支
             throw IllegalArgumentException("Unknown expression")
     }

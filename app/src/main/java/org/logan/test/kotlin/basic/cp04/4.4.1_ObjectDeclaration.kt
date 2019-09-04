@@ -69,7 +69,7 @@ fun main() {
     println(persons.sortedWith(Person.NameComparator)) // 使用类中的对象声明
 
     // Kotlin中的对象声明被编译成通过静态字段来持有它的单一实例的类，这个字段名字始终是 INSTANCE。
-    // 要从Java代码中使用Kotlin对象，可以通过访问静态的INSTANCE字段(Java代码)：
+    // 要从Java代码中使用Kotlin对象，可以通过访问静态的 INSTANCE 字段(Java代码)：
     // CaseInsensitiveFileComparator.INSTANCE.compare(file1, file2);
 }
 

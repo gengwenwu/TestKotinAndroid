@@ -4,8 +4,8 @@ package org.logan.test.kotlin.basic.cp04
  * desc: 声明一个带默认构造方法或属性的类 <br/>
  * 1，主构造函数：在大多数真实的场景中，类的构造方法是非常简单的：它要么没有参数或者直接把参数与对应的属性关联。<br/>
  *    这就是为什么Kotlin有为主构造方法设计的简洁的语法。 <br/>
- * 2，constructor 关键字 <br/>
- * 3，init关键字 <br/>
+ * 2，constructor 关键字，可声明 主构造和从构造。<br/>
+ * 3，init关键字，初始化操作，会和主构造方法一起使用。 <br/>
  *
  * time: 2019-08-30 11:43 <br/>
  * author: Logan <br/>

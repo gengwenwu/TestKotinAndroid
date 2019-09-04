@@ -1,7 +1,7 @@
 package org.logan.test.kotlin.basic.cp04.ext4212
 
 /**
- * desc: Kotln类继承 <br/>
+ * desc: Kotlin类继承 <br/>
  * time: 2019-08-30 13:33 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
@@ -17,7 +17,7 @@ open class Button
 
 
 // 必须显示地调用父类的构造方法，即使它没有任何的参数
-// 注意与接口的区别：接口没有构造方法，所以你实现一个接口的时候，不需要在父类型列表中它的名称后面加上括号。
+// 注意与接口的区别：接口没有构造方法，所以你实现一个接口的时候，不需要在父类型列表中它的名称后面加上小括号。
 class RadioButton : Button()
 
 
