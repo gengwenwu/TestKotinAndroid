@@ -35,7 +35,7 @@ fun main() {
     println(people.maxBy { it.age }) // {it.age}实现了这个逻辑的lambda，it指的是Person对象。
 
 
-    // 如果lambda刚好是"函数"或者"属性的委托"，可以用成员引用替代（:: 符号）
+    // 如果lambda刚好是"函数"或者"属性的委托"，可以用"成员引用"替代（符号是::）
     println(people.maxBy(Person::age))
 
 }
