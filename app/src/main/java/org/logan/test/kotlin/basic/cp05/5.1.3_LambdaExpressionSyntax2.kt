@@ -1,7 +1,7 @@
 package org.logan.test.kotlin.basic.cp05
 
 /**
- * desc: Lambda表达式语法 - 逐步解析Lambda <br/>
+ * desc: Lambda表达式语法 - 逐步解剖Lambda <br/>
  * time: 2019-09-05 14:13 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
@@ -10,16 +10,18 @@ package org.logan.test.kotlin.basic.cp05
 fun main() {
 
     val people = listOf(Person("Alice", 29), Person("Bob", 31))
+
+    // 最精简写法 (求年龄最大值)
     people.maxBy { it.age }
 
 
-    // 1，上面的例子，如果不用任何简明语法子，只能使用下面的代码
+    // 1，上面的例子，扩展开来的语法应该是下面这样
     people.maxBy({ p: Person -> p.age })
 
     /**
      * 2，Kotlin有这样一种语法约定，如果lambda表达式是函数调用的最后一个实参，它可以放在括号的外边。 <br/>
      *    如果你想传递两个或更多的lambda，不能把超过一个的lambda放在外面。 <br/>
-     *    这时使用常规语法来传递它们通常是更好的选择，方便阅读。<br/>
+     *    这时使用常规语法来传递它们通常是更好的选择(lambda都放在小括号里)，方便阅读。<br/>
      **/
     people.maxBy() { p: Person -> p.age }
 
@@ -36,7 +38,7 @@ fun main() {
     people.maxBy { p -> p.age }
 
     /**
-     *  5，如果当前上下文期望的是只有一个参数的lambda且这个参数的类型可以推断出来，就会生成it。<br/>
+     *  5，如果当前上下文期望的是"只有一个参数的lambda"且这个参数的"类型可以推断"出来，就会生成it。<br/>
      *  注意：it约定能大大缩短代码，但不应该滥用它。尤其是在嵌套lambda的情况下，最好显示地声明每个lambda地参数。<br/>
      *  否则，很难搞清楚it引用的到底是哪个值。<br/>
      **/

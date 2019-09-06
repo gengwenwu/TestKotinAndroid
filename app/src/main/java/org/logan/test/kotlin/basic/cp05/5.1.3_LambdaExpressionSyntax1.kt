@@ -1,10 +1,10 @@
 package org.logan.test.kotlin.basic.cp05
 
 /**
- * desc: Lambda表达式语法 <br/>
- * {x: Int, y:Int -> x + y} <br/>
+ * desc: Lambda表达式基本语法 <br/>
+ * {x: Int, y: Int -> x + y} <br/>
  *
- * Kotlin的lambda表达式始终用花括号包围，箭头把实参列表和lambda的函数体隔开。<br/>
+ * Kotlin的lambda表达式始终用花括号{}包围，箭头把实参列表和lambda的函数体隔开。<br/>
  * 箭头左边是入参(注意，没有小括号包起来)，箭头后边是具体的实现。<br/>
  *
  * time: 2019-09-05 13:57 <br/>
