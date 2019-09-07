@@ -1,7 +1,7 @@
 package org.logan.test.kotlin.basic.cp05
 
 /**
- * desc: 成员引用 - 为直接调用方法或访问属性的函数值提供了一种简短的语法。<br/>
+ * desc: 成员引用 - 为直接调用方法或访问属性的函数提供了一种简短的语法。<br/>
  * 基本语法：Class::member，双冒号将类名与引用的成员（方法或属性）分隔出来 <br/>
  *
  * time: 2019-09-06 11:50 <br/>
@@ -28,7 +28,7 @@ fun main() {
 
 
     // 3
-    run(::salute) // 可以直接引用 顶层函数
+    run(::salute) // 可以直接引用 顶层函数，注意，这里省略了类名。
     run { salute() }
 
 
@@ -40,24 +40,24 @@ fun main() {
         sendEmail(person, message)
     }
 
-    // 5，相反，使用成员引用就简单的多
+    // 相反，使用成员引用就简单的多
     val nextAction = ::sendEmail
 
 
-    // 6，可以使用"构造函数引用"来保存或者延迟创建类实例的动作
+    // 5，可以使用"构造函数引用"来保存或者延迟创建类实例的动作
     val createPerson = ::Person // 创建"Person"类实例的动作被保存到createPerson中
     val p = createPerson("Alice", 29)  // 这里才是真正创建对象的地方
     println(p)
 
 
-    // 7，方法引用同样适用于扩展函数
+    // 6，方法引用同样适用于扩展函数
     val predicate = Person::isAdult
 
 
-    // 8，Kotlin 版本针对方法引用的一些区别
+    // 7，Kotlin 不同版本，针对方法引用的一些区别
     val p1 = Person("Dmitry", 34)
     val personAgeFunction = Person::age
-    println(personAgeFunction(p1)) // 在Kotlin 1.0，当引用类的方法或属性时，在调用这个引用时，要求提供那个类的实例。如：入参p1
+    println(personAgeFunction(p1)) // 在Kotlin 1.0，当引用类的方法或属性时，在调用这个引用时，要求提供那个类的实例。如：这里的入参p1
 
     val dmitrysAgeFunction = p1::age
     println(dmitrysAgeFunction()) // Kotlin 1.1 支持绑定方法引用。这将允许使用方法引用语法来捕捉特定对象实例中的方法引用。
@@ -67,10 +67,8 @@ fun main() {
 
 fun salute() = println("Salute!")
 
-
 fun sendEmail(person: Person, message: String) {
     println("$person send $message")
 }
-
 
 fun Person.isAdult() = age >= 21
