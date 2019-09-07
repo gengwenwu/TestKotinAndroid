@@ -28,8 +28,8 @@ fun main() {
 
 
     // 3
-    run(::salute) // 可以直接引用 顶层函数，注意，这里省略了类名。
-    run { salute() }
+    run(::salute) // 可以直接引用 顶层函数，注意，这里省略了类名。外层是()
+    run { salute() } // lambda外层是{}
 
 
     /**
