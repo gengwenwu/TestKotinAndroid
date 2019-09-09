@@ -14,6 +14,6 @@ annotation class Anno( // Kotlin使用annotation关键字声明注解
     val arg2: KClass<out Any>
 )
 
-// Kotlin注解不能有任何实现
+// Kotlin注解不能有任何实现主体
 
 
