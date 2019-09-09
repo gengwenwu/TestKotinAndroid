@@ -42,4 +42,4 @@ annotation class PropertyCompatibleInJavaAndKotlin
  *  Java 默认会在.class文件中保留注解，但不会让它们在运行时被访问到。
  *  Kotlin 默认的是拥有RUNTIME保留期。
  **/
-annotation class Ann
+annotation class Ann4Retention
