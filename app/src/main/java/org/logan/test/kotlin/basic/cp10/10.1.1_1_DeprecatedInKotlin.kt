@@ -10,7 +10,6 @@ package org.logan.test.kotlin.basic.cp10
  * since V 1.0 <br/>
  */
 
-
 @Deprecated("", ReplaceWith("removeAt(index)")) // ReplaceWith 指定替换的新函数
 fun remove(index: Int) {
 
@@ -25,3 +24,4 @@ fun main() {
     remove(2)
 
 }
+
