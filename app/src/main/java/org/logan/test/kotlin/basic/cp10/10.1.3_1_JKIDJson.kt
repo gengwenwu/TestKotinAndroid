@@ -5,6 +5,9 @@ import ru.yole.jkid.serialization.serialize
 
 /**
  * desc: 使用jkid库 处理json <br/>
+ * 1，serialize()：将对象转换为json字符串
+ * 2，deserialize()：将json字符串转换为对象
+ *
  * time: 2019-09-09 16:38 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>

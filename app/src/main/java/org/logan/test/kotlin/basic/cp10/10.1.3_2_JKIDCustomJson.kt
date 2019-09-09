@@ -7,6 +7,9 @@ import ru.yole.jkid.serialization.serialize
 
 /**
  * desc: jkid库 使用注解自定义解析过程 <br/>
+ * 1，@JsonName()：指定别名
+ * 2，@JsonExclude()：排除指定字段在序列化和反序列化之外。
+ *
  * time: 2019-09-09 16:45 <br/>
  * author: Logan <br/>
  * since V 1。0 <br/>
