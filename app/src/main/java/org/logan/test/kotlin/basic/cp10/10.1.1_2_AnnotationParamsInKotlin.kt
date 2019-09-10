@@ -25,16 +25,16 @@ fun remove2(index: Int) {
 
 
 // 3，数组作为注解的实参 - value成员
-@AnnWithArrayValue("A", "B", "C")
+@AnnWithArrayValue("Alice", "Bob", "Lisa")
 class B
 
 
 // 4，数组作为注解的实参 - 非value成员, Kotlin 1.2+ 写法
-@AnnWithArrayMethod(names = ["A", "B", "C"])
+@AnnWithArrayMethod(names = ["Alice", "Bob", "Lisa"])
 class C
 
 // 数组作为注解的实参 - 非value成员, Kotlin旧版本写法
-@AnnWithArrayMethod(names = arrayOf("A", "B", "C"))
+@AnnWithArrayMethod(names = arrayOf("Alice", "Bob", "Lisa"))
 class D
 
 
