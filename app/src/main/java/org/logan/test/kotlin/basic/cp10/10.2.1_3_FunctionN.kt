@@ -5,7 +5,7 @@ package org.logan.test.kotlin.basic.cp10
  *
  * FunctionN中的N代表了不同数量参数的函数。每一个FunctionN类型都继承了 Function，并加上一个额外的 invoke()。<br/>
  * 例如：Function2 声明了 operator fun invoke(p1: P1, p2: P2): R, 其中P1和P2代表着函数的参数类型，而R代表着函数的返回类型。<br/>
- * 搜索：Functionskt文件，可以找到源文件Functions.kt文件。
+ * 搜索：Function2，找到源文件Functions.kt文件。
  *
  * FunctionN 又称之为：合成的编译器生成类型，你不会在包 kotlin.reflect 中找到它们的声明。<br/>
  * 这意味着你可以使用任意数量参数的函数接口(其实最多22个参数)。合成类型的方式减小了kotlin-reflect.jar的尺寸，同时避免了对函数类型参数数量的人为限制。<br/>

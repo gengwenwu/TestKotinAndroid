@@ -1,7 +1,7 @@
 package org.logan.test.kotlin.basic.cp10
 
 /**
- * desc: Kotlin KCallable - 是函数(KFunction)和属性(KProperty)的超接口。<br/>
+ * desc: Kotlin反射API - KCallable - 是函数(KFunction)和属性(KProperty)的超接口。<br/>
  *
  * 它有两个重要的函数：
  * 1，call()：允许你调用对应的函数 或 对应属性的getter <br/>
@@ -14,10 +14,13 @@ package org.logan.test.kotlin.basic.cp10
 
 fun foo(x: Int) = println(x)
 
+// ::foo 是函数类型 (Int) -> Unit 的一个值。
+// val consumer: (Int) -> Unit = ::foo
+
 
 fun main() {
 
-    val kFunction = ::foo // ::foo表达式的值是来自反射 API的 KFunction 类的一个实例
+    val kFunction = ::foo // 函数引用 ::foo表达式的值是来自反射 API的 KFunction 类的一个实例
     kFunction.call(42) // 调用函数foo，输出42
     // kFunction.call("42") // call()参数不做类型检查，这句代码编译通过，但是运行出错！
 
