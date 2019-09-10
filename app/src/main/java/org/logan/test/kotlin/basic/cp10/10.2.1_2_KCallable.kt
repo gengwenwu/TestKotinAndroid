@@ -16,11 +16,18 @@ fun foo(x: Int) = println(x)
 
 
 fun main() {
-    val kFunction = ::foo
-    kFunction.call(42) // 调用函数foo，输出42
 
-    val KProperty = Person::age
-    val age = KProperty.call(Person("Alice", 29))
+    val kFunction = ::foo // ::foo表达式的值是来自反射 API的 KFunction 类的一个实例
+    kFunction.call(42) // 调用函数foo，输出42
+    // kFunction.call("42") // call()参数不做类型检查，这句代码编译通过，但是运行出错！
+
+    val funtion1: Function1<Int, Unit> = ::foo // 使用FunctionN 调用函数
+    funtion1.invoke(43)
+
+
+    /* 2，调用类的属性 */
+    val kProperty = Person::age
+    val age = kProperty.call(Person("Alice", 29))
     println(age)
 
 }
