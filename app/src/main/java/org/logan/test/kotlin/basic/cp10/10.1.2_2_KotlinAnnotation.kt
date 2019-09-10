@@ -5,7 +5,7 @@ package org.logan.test.kotlin.basic.cp10
  * 1, 一些注解代替了 Java语言中关键字，如: @Volatile、@Strictfp 充当了 Java的 volatile、Strictfp的替身。 <br/>
  * 2, 其它的注解则是被用来改变 Kotlin声明对 Java调用者的可见性: @JvmName、@JvmStatic、@JvmOverloads、@JvmField等 <br/>
  *
- * time: 2019-09-09 16:09 <br/>
+ * time: 2019-09-07 16:09 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */

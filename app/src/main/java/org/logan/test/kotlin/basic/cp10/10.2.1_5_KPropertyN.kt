@@ -4,7 +4,7 @@ package org.logan.test.kotlin.basic.cp10
  * desc: KProperty 提供了类似FunctionN的功能，但只有KProperty1、KProperty2，<br/>
  * 它们都是一个泛型类,而且它们都在库代码中，非自动生成的。<br/>
  *
- * time: 2019-09-10 14:30 <br/>
+ * time: 2019-09-08 14:30 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */

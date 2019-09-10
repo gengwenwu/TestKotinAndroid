@@ -7,7 +7,7 @@ import org.logan.test.kotlin.basic.cp10.java.JsonNameInJava
 /**
  * desc: Java注解拥有一个叫作 value 的方法，而 Kotlin注解拥有一个name属性。
  *
- * time: 2019-09-09 18:54 <br/>
+ * time: 2019-09-07 18:54 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */

@@ -6,7 +6,7 @@ import ru.yole.jkid.DeserializeInterface
  * desc: 使用类做注解参数 <br/>
  * 可以参考JKid @DeserializeInterface注解
  *
- * time: 2019-09-09 22:17 <br/>
+ * time: 2019-09-07 22:17 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */

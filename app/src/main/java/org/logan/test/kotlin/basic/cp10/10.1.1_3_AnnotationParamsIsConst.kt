@@ -7,7 +7,7 @@ import org.junit.Test
  * desc: 注解实参需要在编译期就是己知的，所以不能引用任意的属性作为实参。 <br/>
  * 要把属性当作注解实参使用，你需要用 const修饰符标记它。
  *
- * time: 2019-09-09 14:18 <br/>
+ * time: 2019-09-07 14:18 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */

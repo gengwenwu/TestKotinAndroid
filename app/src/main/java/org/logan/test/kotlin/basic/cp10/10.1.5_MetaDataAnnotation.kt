@@ -6,7 +6,7 @@ package org.logan.test.kotlin.basic.cp10
  * 标准库定义的元注解中最常见是：
  *  1，@Target 2，@Retention
  *
- * time: 2019-09-09 19:27 <br/>
+ * time: 2019-09-07 19:27 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */

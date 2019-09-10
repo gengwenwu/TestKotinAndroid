@@ -3,7 +3,7 @@ package org.logan.test.kotlin.basic.cp10
 /**
  * desc: Kotlin反射API - KProperty <br/>
  *
- * time: 2019-09-10 14:05 <br/>
+ * time: 2019-09-08 14:05 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */

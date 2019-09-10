@@ -13,7 +13,7 @@ import org.logan.test.kotlin.basic.cp10.java.Ann
  * 如：一个Kotlin属性就对应了一个Java字段、一个getter，setter等。说明这些元素中哪些需要注解十分必要。<br/>
  * 点目标声明被用来说明要需要注解的元素，点目标语法：将@符号和注解名称之间，并用冒号和注解名称隔开。如：@get:Rule <br/>
  *
- * time: 2019-09-09 15:14 <br/>
+ * time: 2019-09-07 15:14 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */

@@ -7,7 +7,7 @@ import org.logan.test.kotlin.basic.cp10.java.AnnWithArrayValue
 /**
  * desc: 注解只能拥有类型参数: 基本数据类型、字符串、枚举、类引用(如：Foo::class)、其它的注解类，以及前面这些类型的数组。<br/>
  * 指定注解实参的语法与 Java有些微小的差别。 <br/>
- * time: 2019-09-09 14:35 <br/>
+ * time: 2019-09-07 14:35 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
