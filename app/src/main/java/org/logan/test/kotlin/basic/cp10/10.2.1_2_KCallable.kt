@@ -5,7 +5,7 @@ package org.logan.test.kotlin.basic.cp10
  *
  * 它有两个重要的函数：
  * 1，call()：允许你调用对应的函数 或 对应属性的getter <br/>
- * 2，callBy()：？？
+ * 2，callBy()：能用来调用带默认参数值的方法。
  *
  * time: 2019-09-10 11:09 <br/>
  * author: Logan <br/>
