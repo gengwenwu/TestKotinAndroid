@@ -20,12 +20,12 @@ fun foo(x: Int) = println(x)
 
 fun main() {
 
-    val kFunction = ::foo // 函数引用 ::foo表达式的值是来自反射 API的 KFunction 类的一个实例
+    val kFunction = ::foo // 方法引用 ::foo表达式的值是来自反射 API的 KFunction 类的一个实例
     kFunction.call(42) // 调用函数foo，输出42
     // kFunction.call("42") // call()参数不做类型检查，这句代码编译通过，但是运行出错！
 
     val funtion1: Function1<Int, Unit> = ::foo // 使用FunctionN 调用函数
-    funtion1.invoke(43)
+    funtion1.invoke(43) // "43"
 
 
     /* 2，调用类的属性 */

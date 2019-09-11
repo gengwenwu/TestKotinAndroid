@@ -24,7 +24,7 @@ fun main() {
     val kClass = person.javaClass.kotlin
     println(kClass.simpleName) //  输出 Person
 
-    // memberProperties，获取Person中所有的属性
+    // memberProperties，获取Person中所有的非扩展属性
     kClass.memberProperties.forEach {
         println(it.name) // 输出 age 和 name 成员属性
     }
