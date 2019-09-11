@@ -36,7 +36,7 @@ data class Person4(
 
 @SuppressLint("SimpleDateFormat")
 fun main() {
-    val person = Person4("Alice", SimpleDateFormat("dd-mm-yyyy").parse("13-02-1987"))
+    val person = Person4("Alice", SimpleDateFormat("dd-mm-yyyy").parse("13-02-1995"))
     println(serialize(person))
 
 }

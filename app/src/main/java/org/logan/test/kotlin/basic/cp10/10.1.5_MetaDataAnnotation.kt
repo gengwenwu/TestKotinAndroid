@@ -14,9 +14,11 @@ package org.logan.test.kotlin.basic.cp10
 /**
  * 1, @Target
  * 说明可以被应用的元素类型。如果不使用它，所有的声明都可以应用这个注解。<br/>
- * AnnotationTarget枚举的值列出了可以应用注解的全部可能的目标，包括：类、文件、函数、属性、属性访问器、所有的表达式等等。
+ * AnnotationTarget枚举的值列出了可以应用注解的全部可能的目标，<br/>
+ * 包括：类、文件、函数、属性、属性访问器、所有的表达式等等。<br/>
  **/
 @Target(AnnotationTarget.PROPERTY)
+@Retention(AnnotationRetention.RUNTIME)
 annotation class JsonExclude2
 
 // 2，声明多个目标
@@ -24,7 +26,7 @@ annotation class JsonExclude2
 annotation class JsonExclude3
 
 
-// 3， 声明自定义元注解，使用 ANNOTATION_CLASS
+// 3， 声明自定义元注解，使用 AnnotationTarget.ANNOTATION_CLASS
 @Target(AnnotationTarget.ANNOTATION_CLASS)
 annotation class BindingAnnotation
 

@@ -26,10 +26,13 @@ data class Person3(
     /**
      * // 使用类作为注解参数。
      * 当JKid读到一个 Person类实例嵌套的 company对象时，它创建并反序列化了一个 CompanyImpl的实例，把它存储在 company属性中。
-     * 使用名称后面跟上 ::class 关键字来引用一个类。
+     * 使用名称后面跟上 ::class 关键字来引用一个类。如下方的：CompanyImpl::class
      * @DeserializeInterface 声明中，入参类型是KClass，它对标的是Java的 java.lang.Class类型。
-     * KClass的类型参数说明了这个引用可以指向哪些 Kotlin类。 例如，CompanyImpl::class的类型是 KClass<CompanyImpl>
+     * KClass的类型参数说明了这个引用指向Kotlin某个类。 例如，CompanyImpl::class的类型是 KClass<CompanyImpl>
      **/
     @DeserializeInterface(CompanyImpl::class) val company: Company
 
 )
+
+// TODO 补例子
+

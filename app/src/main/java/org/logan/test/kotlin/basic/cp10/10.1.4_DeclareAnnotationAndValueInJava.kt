@@ -12,11 +12,14 @@ import org.logan.test.kotlin.basic.cp10.java.JsonNameInJava
  * since V 1.0 <br/>
  */
 
-// Java中value方法很特殊：当你应用一个注解时，你需要提供 value以外所有指定特性显式名称。
+// 1，Java中value方法很特殊：当你应用一个注解时，你需要提供 value以外所有指定特性显式名称。
 @JsonNameInJava("", value2 = "")
 class AnnotationTest2
 
-// Kotlin中应用注解就是常规的构造方法调用。可以使用命名实参语法让实参的名称变成显式的，或者可以省略掉这些实参的名称. <br/>
+/**
+ * 2，Kotlin中应用注解就是常规的构造方法调用。 <br/>
+ * 可以使用命名实参语法让实参的名称变成显式的，或者可以省略掉这些实参的名称。 <br/>
+ **/
 @JsonNameInKotlin("value", "")
 class AnnotationTest3
 
