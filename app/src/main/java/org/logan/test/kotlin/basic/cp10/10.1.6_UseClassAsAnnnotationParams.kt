@@ -1,6 +1,7 @@
 package org.logan.test.kotlin.basic.cp10
 
 import ru.yole.jkid.DeserializeInterface
+import ru.yole.jkid.deserialization.deserialize
 
 /**
  * desc: 使用类做注解参数 <br/>
@@ -34,5 +35,11 @@ data class Person3(
 
 )
 
-// TODO 补例子
+
+fun main() {
+    val json = """ {"name": "Alice", "company": {"name": "Microsoft"}} """
+    val person = deserialize<Person3>(json)
+    println(person)
+
+}
 
