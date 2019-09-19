@@ -1,7 +1,7 @@
 package org.logan.test.kotlin.basic.cp05
 
 /**
- * desc: Kotlin 序列 asSequence() <br/>
+ * desc: Kotlin 序列 asSequence()，类似于Java8流的翻版。<br/>
  * Kotlin惰性集合操作的入口就是Sequence接口。这个接口表示的就是一个可以逐个列举元素的元素序列。<br/>
  * Sequence只提供了一个方法，iterator()，用来从序列中获取值。 <br/>
  *
