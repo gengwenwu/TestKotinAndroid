@@ -1,7 +1,6 @@
 package org.logan.test.kotlin.basic.cp05
 
 
-import org.logan.test.kotlin.basic.cp05.java.ToolJobCp05
 import org.logan.test.kotlin.basic.cp05.java.ToolJobCp05.postponeComputation
 
 /**
@@ -17,7 +16,7 @@ import org.logan.test.kotlin.basic.cp05.java.ToolJobCp05.postponeComputation
 fun main() {
 
     /**
-     * 例1
+     * 例1：
      * 可以把lambda传给任何期望函数式接口的方法。
      **/
     postponeComputation(1000) {
@@ -26,7 +25,7 @@ fun main() {
     }
 
     /**
-     * 例2
+     * 例2：
      * 下面显式地创建一个实现了 Runnable的匿名对象，实现效果与上面的lambda一样。
      * 但是有点区别，就是创建实例点次数上。譬如：该例的Runnable实例创建次数是有区别的。
      **/
@@ -38,17 +37,17 @@ fun main() {
     })
 
 
-    // 例3，下面的例子与例1是在性能上是完全等价的
+    // 例3：下面的例子与例1在性能上是完全等价的
     val runnable = Runnable { println("预先实例化runnable方式") }
     postponeComputation(1000, runnable)
 
 
-    // 例4，看object方式的内存变化
+    // 例4：看object方式的内存变化
     println()
     showObjectMemoryAddress()
 
 
-    // 例5，被lambda捕获，匿名对象每次调用就不会是一个对象实例了。
+    // 例5：被lambda捕获后，匿名对象每次调用就不会是一个对象实例了。
     handleComputation("11")
     handleComputation("22")
 
@@ -61,7 +60,7 @@ fun main() {
 }
 
 /**
- * 如果 lambda 从包围它的作用域中捕捉了变量，每次调用就不再可能重用同一个实例了。
+ * 如果 lambda 从包围它的作用域中捕捉了变量，每次调用就不再重用同一个实例了。
  * 这种情况下，每次调用时编译器都要创建一个新对象，其中存储着被捕捉的变量的值。
  **/
 fun handleComputation(id: String) {
@@ -73,15 +72,15 @@ fun handleComputation(id: String) {
 
 fun showObjectMemoryAddress() {
 //    for (i in 1..3) {
-//        ToolJobCp05.postponeComputation(1000) {
-//            println("Lambda方式 1")
+//        postponeComputation(1000) {
+//            println("Lambda方式 1：" + this) // 1，lambda内部没有匿名对象那样的this
 //        }
 //    }
 
     for (i in 1..3) {
-        ToolJobCp05.postponeComputation(1000, object : Runnable {
+        postponeComputation(1000, object : Runnable {
             override fun run() {
-                println("object方式调用（注意看内存地址！）：" + this)
+                println("object方式调用（注意看内存地址！）：" + this) // 2，在匿名对象内，this关键字指向该对象实例
             }
         })
     }
