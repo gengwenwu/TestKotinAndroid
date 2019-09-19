@@ -6,7 +6,7 @@ package org.logan.test.kotlin.basic.cp05
  * Kotlin 允许你在调用接收SAM接口作为参数的方法时使用lambda，来保证你的 Kotlin代码既整洁又符合习惯。<br/>
  *
  * 注意：和Java 不同，Kotlin拥有完全的"函数类型"。 <br/>
- * 正因为这样，需要接收 lambda作为参数的Kotlin函数，应该使用函数类型而不是函数式接口类型，作为这些参数的类型。<br/>
+ * 正因为这样，需要接收 lambda作为参数的Kotlin函数，应该使用函数类型而不是ASM类型，作为这些参数的类型。<br/>
  * Kotlin 不支持把 lambda自动转换成实现 Kotlin 接口的对象。
  *
  * time: 2019-09-19 11:06 <br/>
