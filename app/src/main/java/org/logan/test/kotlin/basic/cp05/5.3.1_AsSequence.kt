@@ -17,7 +17,7 @@ package org.logan.test.kotlin.basic.cp05
 fun main() {
     /**
      * 执行这段代码并不会在控制台上输出任何内容。这意味着 map 和 filter 变换被延期了，
-     * 它们只有在获取结果的时候才会被调用 (即末端操作被调用的时候)
+     * 它们只有在获取结果的时候才会被调用 (即：末端操作被调用的时候)
      **/
     listOf(1, 2, 3, 4).asSequence()
         .map {
@@ -31,7 +31,7 @@ fun main() {
         }
 
 
-    // 对序列来说，所有操作是按顺序应用在每一个元素上：处理完第一个元素(先映射再过滤)，然后完成第二个元素的处理，以此类推。
+    // 对序列来说，所有操作是按顺序应用在每一个元素上：处理完第一个元素(如下：先映射再过滤)，然后完成第二个元素的处理，以此类推。
     listOf(1, 2, 3, 4).asSequence()
         .map {
             print("map($it) ")
@@ -44,7 +44,7 @@ fun main() {
 
     println()
     /**
-     * 下面两断代码虽然实现的功能一样，但是使用序列的性能会更好。原因：1，没有创建集合。 2，执行的次数更少。
+     * 下面两断代码虽然实现的功能一样，但是使用序列的性能会更好。原因：1，中间操作没有创建列表。 2，函数执行的次数也更少。
      **/
     // map的结果首先被求出来，即变换初始集合中的所有元素。第二步，中间集合中满足判断式的一个元素会被找出来。
     println(listOf(1, 2, 3, 4).map { it * it }.find { it > 3 })
@@ -64,7 +64,7 @@ fun main() {
 
     // 先map、后filter
     println(people.asSequence().map(Person::name).filter { it.length < 4 }.toList())
-    // 先filter、后map (性能更好)
+    // 先filter(过滤掉不符合条件的数据)、后map (性能更好)
     println(people.asSequence().filter { it.name.length < 4 }.map(Person::name).toList())
     // 综上，如果map在前，每个元素都被变换。而如果filter在前，不合适的元素会被尽早地过滤掉且后面不会发生变换 。
 
