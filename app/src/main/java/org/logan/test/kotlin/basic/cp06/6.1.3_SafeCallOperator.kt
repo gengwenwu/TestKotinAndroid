@@ -7,6 +7,10 @@ import android.annotation.SuppressLint
  * 它允许你把一次 null 检查和一次方法调用合并成一个操作。例如：<br/>
  * 表达式 s?.toUpperCase() 等同于这种写法: if (s != null) s.toUpperCase() else null <br/>
  *
+ * foo?.bar()
+ *      如果foo!=null，调用foo.bar()函数。
+ *      如果foo==null，返回null。
+ *
  * time: 2019-09-22 18:13 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
