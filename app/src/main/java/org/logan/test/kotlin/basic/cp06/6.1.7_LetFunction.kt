@@ -1,5 +1,7 @@
 package org.logan.test.kotlin.basic.cp06
 
+import org.logan.test.kotlin.basic.cp05.sendEmail
+
 /**
  * desc: Kotlin - Let函数 <br/>
  *  let 函数做的事情就是把一个调用它的对象变成lambda表达式的参数。 <br/>
@@ -40,9 +42,17 @@ fun main() {
     email?.let { sendEmailTo(it) }
 
 
-    // null 案例
+    // 案例4，null
     email = null
     email?.let { sendEmailTo(it) }
+
+    /**
+     * 案例5， let 函数也能被可空的接收者调用，但它并不检查值是否为null。
+     * 如果你在一个可空类型直接上调用 let 函数，而没有使用安全调用运算符，lambda 的实参将会是可空的。
+     * 因此，如果想要使用 let 来检查非空的实参，你就必须使用安全调用运算符?.
+     **/
+    val person: Person? = null
+    // person.let { sendEmailTo(it) } // 编译报错。ERROR: Type mismatch: inferred type is Person? but Person was expected
 
 }
 
