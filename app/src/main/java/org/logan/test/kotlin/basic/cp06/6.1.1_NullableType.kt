@@ -2,7 +2,7 @@ package org.logan.test.kotlin.basic.cp06
 
 /**
  * desc: 可空类型 <br/>
- * 问好可以加在任何类型的后面来表示这个类型的变量可以存储 null 引用 : String?、 Int?、 MyCustomType? 等。
+ * 问号可以加在任何类型的后面，表示这个类型的变量可以存储 null 引用 : String?、 Int?、 MyCustomType? 等。
  * Type? = Type or null。 没有问号的类型表示这种类型的变量不能存储 null 引用。
  *
  * time: 2019-09-22 12:13 <br/>
@@ -15,7 +15,7 @@ fun strLen(s: String) = s.length
 
 /**
  * String后面的?，表示参数s可以接受null类型。
- * 一旦与null进行比较操作后，编译器就会记住 ，并且在这次比较发生的作用域内把这个值当作 非空 来对待。
+ * 一旦与null进行比较操作后，编译器就会记住 ，并且在这次比较发生的作用域内把这个值当作"非空"来对待。
  **/
 fun strLenSafe(s: String?) =
     if (s != null) s.length else 0

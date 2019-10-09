@@ -15,7 +15,6 @@ import org.junit.Test
  */
 
 class MyService {
-
     fun performAction(): String = "foo"
 
 }

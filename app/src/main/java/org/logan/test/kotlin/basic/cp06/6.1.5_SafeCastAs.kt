@@ -17,7 +17,7 @@ package org.logan.test.kotlin.basic.cp06
 class Person1(val firstName: String, val lastName: String) {
 
     override fun equals(o: Any?): Boolean {
-        val otherPerson = o as? Person1 ?: return false
+        val otherPerson = o as? Person1 ?: return false // 安全转换
 
         // 在安全转换之后变量，otherPerson 被智能地转换成Person类型
         return otherPerson.firstName == firstName
