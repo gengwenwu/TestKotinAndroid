@@ -22,6 +22,7 @@ fun verifyUserInput(input: String?) {
 fun main() {
     verifyUserInput(null) // 这里传入null，也不会导致有异常
     verifyUserInput(" ")
+    testLetFunction()
 }
 
 fun String?.isNullOrBlack(): Boolean = // 可空字符串的扩展，在扩展函数语法基础上，再加一个?
@@ -32,6 +33,14 @@ fun String?.isNullOrBlack(): Boolean = // 可空字符串的扩展，在扩展�
  * 并且函数体中的 this 可能为null，所以你必须显式地检查。
  * 在Java中，this 永远是非空的。Kotlin中，在可空类型的扩展函数中，this可以为null。
  **/
+
+
+fun testLetFunction(){
+    val person: Person? = null
+    person.let { // 使用let，你就必须使用安全调用运算符?. ，否则传入非空函数中，会有运行时错误，如下：
+        sendEmailTo(it) // ERROR: Type mismatch: inferred type is Person? but Person was expected
+    }
+}
 
 /**
  * 注意：
