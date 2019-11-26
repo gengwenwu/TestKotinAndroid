@@ -52,7 +52,9 @@ fun main() {
      * 因此，如果想要使用 let 来检查非空的实参，你就必须使用安全调用运算符?.
      **/
     val person: Person? = null
-    // person.let { sendEmailTo(it) } // 编译报错。ERROR: Type mismatch: inferred type is Person? but Person was expected
+    person.let {
+        sendEmailTo(it) // 编译报错，sendEmailTo()参数email非空。ERROR: Type mismatch: inferred type is Person? but Person was expected
+    }
 
 }
 
