@@ -20,7 +20,24 @@ fun yellAtSafe(person: Person) {
     println((person.name ?: "Anyone").toString() + "!!")
 }
 
+// 声明平台类型
+fun declarePlatform(person: Person) {
+    // 在Kotlin 中不能声明一个平台类型的变量，这些类型只能来自Java代码。但你可能会在 IDE 的错误消息中见到它们:
+    // val i: Int = person.name // 编译错误，Type mismatch: inferred type is String! but Int was expected
+
+    // String! 表示法被Kotlin编译器用来表示来自 Java代码的平台类型。 你不能在自己的代码中使用这种语法。
+    // 而且感叹号通常与问题的来源无关，所以通常可以忽略它。它只是强调类型的可空性是未知的。
+
+
+    // 下面两种声明都是有效的，java的属性可以被当作为空或者非空
+    val s: String? = person.name
+    val s1: String = person.name  // 这种声明是OK的。如果你试图用来自Java的null值给一个非空的Kotlin变量赋值，
+                                  // 在赋值的瞬间你就会得到异常。
+
+}
+
+
 fun main() {
     yellAtSafe(Person(null))
-    yellAt(Person(null)) // NullPointerException
+    //  yellAt(Person(null)) // NullPointerException
 }
