@@ -53,7 +53,7 @@ fun main() {
      **/
     val person: Person? = null
     person.let {
-        sendEmailTo(it) // 编译报错，sendEmailTo()参数email非空。ERROR: Type mismatch: inferred type is Person? but Person was expected
+        // sendEmailTo(it) // 编译报错，sendEmailTo()参数email非空。ERROR: Type mismatch: inferred type is Person? but Person was expected
     }
 
 }
