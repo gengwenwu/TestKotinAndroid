@@ -35,10 +35,11 @@ fun String?.isNullOrBlack(): Boolean = // 可空字符串的扩展，在扩展�
  **/
 
 
-fun testLetFunction(){
+fun testLetFunction() {
     val person: Person? = null
-    person.let { // 使用let，你就必须使用安全调用运算符?. ，否则传入非空函数中，会有运行时错误，如下：
-        sendEmailTo(it) // ERROR: Type mismatch: inferred type is Person? but Person was expected
+    person.let {
+        // 使用let，必须使用安全调用运算符?. ，否则传入非空函数中，会有运行时错误，如下：
+       // sendEmailTo(it) // ERROR: Type mismatch: inferred type is Person? but Person was expected
     }
 }
 
