@@ -1,8 +1,8 @@
 package org.logan.test.kotlin.basic.cp06
 
 /**
- * desc: Unit类型: Kotlin的“void” <br/>
- * Kotlin 中的 Unit类型完成了Java中的void一样的功能。大多数情况下，你不会留意到 void和 Unit之间的区别。
+ * desc: Unit类型: Kotlin 的“void” <br/>
+ * Kotlin中的 Unit 类型完成了 Java 中的 void 一样的功能。大多数情况下，你不会留意到 void 和 Unit 之间的区别。
 
  * time: 2019-11-27 15:00 <br/>
  * author: Logan <br/>
