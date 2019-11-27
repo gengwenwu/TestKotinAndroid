@@ -11,4 +11,5 @@ package org.logan.test.kotlin.basic.cp06
 fun main() {
     // 每个这样的函数都会尝试把字符串的内容解析成对应的类型，如果解析失败则抛出 NumberFormatException。
     println("42".toLong())
+    println(Any().javaClass)
 }
