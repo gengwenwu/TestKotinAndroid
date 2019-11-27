@@ -1,7 +1,7 @@
 package org.logan.test.kotlin.basic.cp06
 
 /**
- * desc: 数字转换 <br/>
+ * desc: 数字转换 - 显示转换(赋值、比较的时候) <br/>
  * Kotlin 和 Java之间一条重要的区别就是处理数字转换的方式。
  * Kotlin 不会自动地把数字从一种类型转换成另外一种，即便是转换成范围更大的类型。
  *
