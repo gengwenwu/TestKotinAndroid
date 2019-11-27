@@ -1,4 +1,4 @@
-package org.logan.test.kotlin.java;
+package org.logan.test.kotlin.basic.cp06.java;
 
 /**
  * desc: TODO <br/>

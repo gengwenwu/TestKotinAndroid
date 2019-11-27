@@ -1,6 +1,6 @@
 package org.logan.test.kotlin.basic.cp06
 
-import org.logan.test.kotlin.java.StringProcessor
+import org.logan.test.kotlin.basic.cp06.java.StringProcessor
 
 /**
  * desc: 平台类型 - 继承问题，kotlin继承、实现java类、接口 <br/>
