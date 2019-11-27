@@ -12,7 +12,7 @@ package org.logan.test.kotlin.basic.cp06
 data class Person2(val name: String, val age: Int? = null) {// age是可空类型，被当作java.lang.Integer存储
 
     fun isOlderThan(other: Person2): Boolean? {
-        // 你不能就这样比较 Int?类型的两个值，因为它们之中任何一个都可能为null。
+        // 你不能直接比较 Int?类型的两个值，因为它们之中任何一个都可能为null。
         // 相反，你必须检查两个值都不为 null。然后，编译器才允许你正常地比较它们。
         if (age == null || other.age == null) {
             return null
