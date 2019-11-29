@@ -1,4 +1,4 @@
-package org.logan.test.kotlin
+package org.logan.test.kotlin.basic.cp06
 
 import java.util.concurrent.TimeUnit
 
